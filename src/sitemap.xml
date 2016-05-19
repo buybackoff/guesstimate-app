@@ -1,0 +1,14 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>https://www.getguesstimate.com/models</url>
+    <url>https://www.getguesstimate.com/maintenance</url>
+    <url>https://www.getguesstimate.com/faq</url>
+    <url>https://www.getguesstimate.com/terms</url>
+    <url>https://www.getguesstimate.com/privacy</url>
+    <url>https://www.getguesstimate.com/scratchpad</url>
+    <url>https://www.getguesstimate.com/pricing</url>
+    <!-- TODO(matthew): How to handle dynamic parameters?
+    <url>https://www.getguesstimate.com/users/:id</url>
+    <url>https://www.getguesstimate.com/models/:id</url>
+    <url>https://www.getguesstimate.com/organizations/:id</url>
+    -->
+</urlset>
