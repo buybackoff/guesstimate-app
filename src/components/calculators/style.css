@@ -40,6 +40,18 @@
     }
   }
 
+  table.ui.table{
+    font-size: .8em;
+  }
+
+  .editor {
+    padding: .4rem .8rem;
+    background-color: $grey-6;
+    border: 1px solid #D4D4D4;
+    border-radius: 1px;
+    position: relative;
+  }
+
   .inputs {
     width: 100%;
 
@@ -51,14 +63,6 @@
       .description {
         font-size: .75em;
         color: #666;
-      }
-
-      .editor {
-        padding: .4rem .8rem;
-        background-color: $grey-6;
-        border: 1px solid #D4D4D4;
-        border-radius: 1px;
-        position: relative;
       }
 
       .status {
