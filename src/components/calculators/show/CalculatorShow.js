@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux'
 import ReactMarkdown from 'react-markdown'
 import Helmet from 'react-helmet'
 import {ShareButtons, generateShareIcon} from 'react-share'
+import {ButtonCloseText} from 'gComponents/utility/buttons/close/index.js'
 import Icon from 'react-fa'
 
 import Container from 'gComponents/utility/container/Container.js'
@@ -32,6 +33,7 @@ export class CalculatorShow extends Component {
     resultComputing: false,
     showResult: false,
     hasSimulated: false,
+    showHelp: false
   }
 
   componentWillMount() { this.fetchData() }
@@ -127,14 +129,16 @@ export class CalculatorShow extends Component {
         <div className='row'>
           <div className='col-xs-0 col-md-2'/>
           <div className='col-xs-12 col-md-8'>
-
-            {false &&
+            {!this.state.showHelp &&
               <div className='calculator wide'>
                 <div className='title-bar'>
                   <div className='row'>
-                    <div className='col-xs-12'>
+                    <div className='col-xs-10'>
                       <h1>{title}</h1>
                       {privacy_header}
+                    </div>
+                    <div className='col-xs-2'>
+                      <div className='button blue' onClick={() => {this.setState({showHelp: true})}}>Help </div>
                     </div>
                   </div>
                 </div>
@@ -178,9 +182,16 @@ export class CalculatorShow extends Component {
                 }
               </div>
             }
-            {true &&
+            {this.state.showHelp &&
               <div className='calculator wide help'>
-                <h1> Useful Information </h1>
+                <div className='row'>
+                  <div className='col-xs-9'>
+                    <h1> Useful Information </h1>
+                  </div>
+                  <div className='col-xs-3'>
+                    <ButtonCloseText onClick={() => {this.setState({showHelp: false})}}/>
+                  </div>
+                </div>
                 <hr className='result-divider'/>
 
                 <h2> Input Types </h2>
